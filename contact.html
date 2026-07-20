@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Veloce Tech</title>
+        <style>
+            :root {
+                --dark: #2B241A;
+                --light: #FFFAF2;
+                --beige: #E1CFBC;
+                --green: #2E3B1F;
+                --accent: #A5703C;
+            }
+            
+            * { margin:0; padding:0; box-sizing:border-box; }
+            
+            body {
+                font-family: 'Segoe UI', system-ui, sans-serif;
+                background: var(--light);
+                color: var(--dark);
+            }
+            
+            header {
+                background: var(--dark);
+                color: white;
+                padding: 1rem 5%;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+                font-weight: 800;
+                color: white;
+                text-decoration: none;
+            }
+            
+            .logo span { color: var(--accent); }
+            
+            .hero-small {
+                background: linear-gradient(rgba(43,36,26,0.9), rgba(43,36,26,0.9)), url('images/bigimage.jpg') center/cover;
+                padding: 120px 5% 80px;
+                color: white;
+                text-align: center;
+            }
+            
+            .contact-container {
+                max-width: 1100px;
+                margin: -60px auto 0;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .contact-form {
+                padding: 3rem;
+            }
+            
+            .contact-info {
+                background: var(--dark);
+                color: white;
+                padding: 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            form input, form textarea {
+                width: 100%;
+                padding: 14px;
+                margin-bottom: 1.2rem;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                font-size: 1rem;
+            }
+            
+            form button {
+                background: var(--accent);
+                color: white;
+                border: none;
+                padding: 16px 40px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                cursor: pointer;
+                width: 100%;
+            }
+            
+            @media (max-width: 768px) {
+                .contact-container {
+                    grid-template-columns: 1fr;
+                    margin: 20px 5%;
+                }
+            }
+
+
+
+
+           /* Additional styles for full-width sections & responsiveness */
+            .map-container {
+                margin: 20px 0;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: var(--shadow-subtle);
+            }
+
+            .map-container iframe {
+                width: 100%;
+                height: 250px;
+                border: 0;
+            }
+
+            .location-item {
+                margin-bottom: 30px;
+                border-bottom: 1px solid var(--border-light);
+                padding-bottom: 20px;
+            }
+
+            .location-item:last-child {
+                border-bottom: none;
+            }
+
+            .location-item h4 {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.2rem;
+                color: var(--brand-primary);
+                margin-bottom: 10px;
+            }
+        
+            footer {
+             background: var(--dark);
+             color: var(--light);
+             text-align: center;
+             padding: 3rem 5%;
+             margin-top: 100px;
+           }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">VELOCE<span>TECH</span></a>
+        </header>
+        
+        <div class="hero-small">
+            <h1 style="font-size:3.5rem;">Let's Build Something<br>Extraordinary</h1>
+        </div>
+        
+        <div class="contact-container">
+        
+
+            <!-- RIGHT: Contact Form with Phone Field -->
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <!-- Phone Number Field added below Name -->
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <!-- Hidden fields for FormSubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                    <div id="formStatus" style="margin-top: 15px; font-size: 13px;"></div>
+                </form>
+            </div>
+
+
+
+
+            
+            <div class="contact-info">
+                <h2 style="margin-bottom:2rem;">Contact Information</h2>
+                <p style="margin-bottom:1.5rem;"><strong>Email:</strong><br>velocetechcompany@gmail.com</p>
+                <p style="margin-bottom:1.5rem;"><strong>Phone:</strong><br>+254 (07) 4068-2321</p>
+                <p><strong>Locations:</strong><br>Nairobi Uthiru •  CBD Ronald Ngala  • Narok</p>
+                
+                <div style="margin-top:3rem;">
+                    <p>We usually reply within a few minutes.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--maps-->
+
+        <!-- Nairobi Office -->
+        <div class="location-item">
+            <h4><i class="fas fa-map-marker-alt"></i> Nairobi Office</h4>
+            <div class="footer-contact-item" style="margin-bottom: 8px;">
+                <span>Westlands, Nairobi, Kenya</span>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.817648404454!2d36.80619497422618!3d-1.267149535597916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f172c2f1e2b0b%3A0x8b2e2b3c4d5e6f7!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1712345678901!5m2!1sen!2ske"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Narok Office -->
+        <div class="location-item">
+            <h4><i class="fas fa-map-marker-alt"></i> Narok Office</h4>
+            <div class="footer-contact-item" style="margin-bottom: 8px;">
+                <span>Narok Town, Narok County, Kenya</span>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d35.871234!3d-1.091234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b8b2e2f2e2b0b%3A0x8b2e2b3c4d5e6f7!2sNarok%2C%20Kenya!5e0!3m2!1sen!2ske!4v1712345678902!5m2!1sen!2ske"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+     
+        
+        <footer>
+            <p>&copy; 2026 VeloceTech. Powered by Veloce.</p>
+        </footer>
+
+        <script src="contact.js"></script>
+    </body>
+</html>
